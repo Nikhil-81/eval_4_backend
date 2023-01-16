@@ -12,6 +12,11 @@ app.use(cors())
 app.use("/users",User_rout)
 app.use("/posts",Post_rout)
 
+
+app.get("/",(req,res)=>{
+    res.send("Hello")
+})
+
 app.listen(PORT,async()=>{
     try{
         await CONNECT
